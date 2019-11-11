@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+
+    <script>
+
+        function computerPlay() {
+            //will randomply return either rock, paper, or scissors
+            let choice = '';
+
+            switch (Math.floor(Math.random() * 3)) {
+                case 0:
+                    choice = "rock";
+                    break;
+                case 1:
+                    choice = "paper";
+                    break;
+                case 2:
+                    choice = "scissors";
+            }
+
+            return choice;
+        }; //WORKING
+
+        function singleRound(playerSelection, computerSelection) {
+            //returns a string that declares the winner
+            playerSelection = prompt("Rock, paper, or scissors?").toLowerCase();
+            computerSelection = computerPlay();
+
+            let win = 'You Win! ' + properNoun(playerSelection) + ' beats ' + properNoun(computerSelection);
+            let lose = 'You Lose! ' + properNoun(computerSelection) + ' beats ' + properNoun(playerSelection);
+            let tie = 'Tie! Try again.';
+            let result;
+
+            if (playerSelection == 'rock') {
+                if (computerSelection == 'paper') {
+                    console.log(lose);
+                    result = 'lose';
+                } else if (computerSelection == 'scissors') {
+                    console.log(win);
+                    result = 'win';
+                } else if (computerSelection == 'rock') {
+                    result = tie;
+                }
+            } else if (playerSelection == 'paper') {
+                if (computerSelection == 'rock') {
+                    console.log(win);
+                    result = 'win';
+                } else if (computerSelection == 'scissors') {
+                    console.log(lose);
+                    result = 'lose';
+                } else if (computerSelection == 'paper') {
+                    result = tie;
+                }
+
+            } else if (playerSelection == 'scissors') {
+                if (computerSelection == 'paper') {
+                    console.log(win);
+                    result = 'win';
+                } else if (computerSelection == 'rock') {
+                    console.log(lose);
+                    result = 'lose';
+                    //computerScore++;
+                } else if (computerSelection == 'scissors') {
+                    result = tie;
+                }
+            } else if (playerSelection == 'paper'){
+                if (computerSelection == 'rock') {
+                    console.log(win);
+                    result = 'win';
+                } else if (computerSelection == 'scissors') {
+                    console.log(lose);
+                    result = 'lose';
+                } else if (computerSelection == 'paper') {
+                    result = tie;
+                }
+            }
+
+            if (result == tie) {
+                console.log(tie);
+                singleRound(playerSelection, computerSelection);
+            } else {
+              return result;
+            }
+        }; //WORKING
+
+        function game() {
+            let playerScore = 0;
+            let computerScore = 0;
+
+            for (let i = 0; i < 5; i++) {
+
+                let result = singleRound();
+              
+                if (result == 'win') {
+                    playerScore++;
+                    //console.log(score);
+                } else if (result == 'lose') {
+                    computerScore++;
+                    //console.log(score);
+                }
+              
+                console.log("Score - Player: " + playerScore + ", Computer: " + computerScore);
+              
+            }
+
+            if (playerScore > computerScore) {
+                console.log('You win!');
+                console.log(score);
+            } else {
+                console.log('You lose!')
+                console.log(score);
+            }
+        };
+
+        function properNoun(word) {
+            if (typeof word === 'string') {
+                return word.charAt(0).toUpperCase() + word.slice(1);
+            }
+            return null;
+        };
+
+    </script>
+</body>
+
+</html>
