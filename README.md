@@ -28,3 +28,8 @@ Feel free to re-work your previous functions if you need to. Specifically, you m
 Feel free to create more “helper” functions if you think it would be useful.
 Student Solutions
 Submit a solution with a pull request to this file on the Javascript Curriculum github repository. See the section on Contributing for how.
+
+CHALLENGES:
+1. Scoring would not work as intended. Sometimes it would register score, sometimes it would not. Sometimes it would score the wrong participant. Culprit was postfix incrementation. Results were one round behind. Changed to prefix incrementation.
+
+2. Scoring would not work on a round where a tie occurred. Originally, wins and losses were determined by singleRound(). If it was a tie, the singleRound would restart until there was a clear winner but the returned result would not register as a win or loss. Solution was to return all three kinds of results and handle the tie within the game(). Wins or losses would increment the correct score. Ties would decrement the round counter (i) so that ties wouldn't count as one of the five rounds.
