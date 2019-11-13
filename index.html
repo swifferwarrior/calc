@@ -43,7 +43,8 @@
                     console.log(win);
                     result = 'win';
                 } else if (computerSelection == 'rock') {
-                    result = tie;
+                    console.log(tie);
+                    result = 'tie';;
                 }
             } else if (playerSelection == 'paper') {
                 if (computerSelection == 'rock') {
@@ -53,7 +54,8 @@
                     console.log(lose);
                     result = 'lose';
                 } else if (computerSelection == 'paper') {
-                    result = tie;
+                    console.log(tie);
+                    result = 'tie';
                 }
 
             } else if (playerSelection == 'scissors') {
@@ -65,7 +67,8 @@
                     result = 'lose';
                     //computerScore++;
                 } else if (computerSelection == 'scissors') {
-                    result = tie;
+                    console.log(tie);
+                    result = 'tie';
                 }
             } else if (playerSelection == 'paper'){
                 if (computerSelection == 'rock') {
@@ -75,16 +78,12 @@
                     console.log(lose);
                     result = 'lose';
                 } else if (computerSelection == 'paper') {
-                    result = tie;
+                    console.log(tie);
+                    result = 'tie';
                 }
             }
 
-            if (result == tie) {
-                console.log(tie);
-                singleRound(playerSelection, computerSelection);
-            } else {
               return result;
-            }
         }; //WORKING
 
         function game() {
@@ -96,11 +95,17 @@
                 let result = singleRound();
               
                 if (result == 'win') {
-                    playerScore++;
+                    ++playerScore;
                     //console.log(score);
                 } else if (result == 'lose') {
-                    computerScore++;
+                    ++computerScore;
                     //console.log(score);
+                } else if (result == 'tie') {
+                    if (i < 1){
+                        i = 0;
+                    } else {
+                        --i;
+                    }
                 }
               
                 console.log("Score - Player: " + playerScore + ", Computer: " + computerScore);
@@ -109,10 +114,10 @@
 
             if (playerScore > computerScore) {
                 console.log('You win!');
-                console.log(score);
+                console.log("Score - Player: " + playerScore + ", Computer: " + computerScore);
             } else {
                 console.log('You lose!')
-                console.log(score);
+                console.log("Score - Player: " + playerScore + ", Computer: " + computerScore);
             }
         };
 
