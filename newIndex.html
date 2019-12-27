@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+    <button id="paperId">Paper</button>
+
+    <button id="rockId">Rock</button>
+
+    <button id="scissorsId">Scissors</button>
+
+</body>
+
+<script type="text/Javascript">
+        const rockBtn = document.getElementById("rockId");
+        const paperBtn = document.getElementById("paperId");
+        const scissorsBtn = document.getElementById("scissorsId");
+
+        rockBtn.addEventListener("click", () => singleRound("rock"));
+        paperBtn.addEventListener("click", () => singleRound("paper"));
+        scissorsBtn.addEventListener("click", () => singleRound("scissors"));
+
+        let roundResult;
+
+        function computerPlay() {
+            //will randomply return either rock, paper, or scissors
+            let choice = '';
+    
+            switch (Math.floor(Math.random() * 3)) {
+                case 0:
+                    choice = "rock";
+                    break;
+                case 1:
+                    choice = "paper";
+                    break;
+                case 2:
+                    choice = "scissors";
+            }
+    
+            return choice;
+        };
+    
+        function singleRound(playerSelection) {
+            let computerSelection = computerPlay();
+            console.log("Your selection is " + playerSelection);
+            console.log("The computer chose " + computerSelection);
+    
+            let win = 'You Win! ' + properNoun(playerSelection) + ' beats ' + properNoun(computerSelection);
+            let lose = 'You Lose! ' + properNoun(computerSelection) + ' beats ' + properNoun(playerSelection);
+            let tie = 'Tie! Try again.';
+            let result;
+    
+            if (playerSelection == 'rock') {
+                if (computerSelection == 'paper') {
+                    console.log(lose);
+                    result = 'lose';
+                } else if (computerSelection == 'scissors') {
+                    console.log(win);
+                    result = 'win';
+                } else if (computerSelection == 'rock') {
+                    console.log(tie);
+                    result = 'tie';;
+                }
+            } else if (playerSelection == 'paper') {
+                if (computerSelection == 'rock') {
+                    console.log(win);
+                    result = 'win';
+                } else if (computerSelection == 'scissors') {
+                    console.log(lose);
+                    result = 'lose';
+                } else if (computerSelection == 'paper') {
+                    console.log(tie);
+                    result = 'tie';
+                }
+    
+            } else if (playerSelection == 'scissors') {
+                if (computerSelection == 'paper') {
+                    console.log(win);
+                    result = 'win';
+                } else if (computerSelection == 'rock') {
+                    console.log(lose);
+                    result = 'lose';
+                    //computerScore++;
+                } else if (computerSelection == 'scissors') {
+                    console.log(tie);
+                    result = 'tie';
+                }
+            } else if (playerSelection == 'paper') {
+                if (computerSelection == 'rock') {
+                    console.log(win);
+                    result = 'win';
+                } else if (computerSelection == 'scissors') {
+                    console.log(lose);
+                    result = 'lose';
+                } else if (computerSelection == 'paper') {
+                    console.log(tie);
+                    result = 'tie';
+                }
+            }
+    
+            roundResult = result;
+    
+        };
+    
+        function game() {
+            let playerScore = 0;
+            let computerScore = 0;
+    
+            for (let i = 0; i < 5; i++) {
+    
+                let result = roundResult;
+    
+                if (result == 'win') {
+                    ++playerScore;
+                    // console.log("Player: " + playerScore + "/n" + "Computer: " + computerScore);
+                } else if (result == 'lose') {
+                    ++computerScore;
+                    // console.log(playerScore);
+                } else if (result == 'tie') {
+                    if (i < 1) {
+                        i = 0;
+                    } else {
+                        --i;
+                    }
+                }
+    
+                console.log("Score - Player: " + playerScore + ", Computer: " + computerScore);
+    
+            }
+    
+            if (playerScore > computerScore) {
+                console.log('You win!');
+                console.log("Score - Player: " + playerScore + ", Computer: " + computerScore);
+            } else {
+                console.log('You lose!')
+                console.log("Score - Player: " + playerScore + ", Computer: " + computerScore);
+            }
+        };
+    
+        function properNoun(word) {
+            if (typeof word === 'string') {
+                return word.charAt(0).toUpperCase() + word.slice(1);
+            }
+            return null;
+        };
+    
+        function choose(choice) {
+            return choice;
+        }
+    </script>
+
+</html>
