@@ -1,0 +1,63 @@
+body{
+    background-color: aqua;
+}
+#choices, #stats, #marquee{
+    display: block;
+    border: 1px solid black;
+    text-align: center;
+    background-color: antiquewhite;
+    margin: 25px;
+    padding: 25px;
+}
+
+table{
+  margin: auto;
+/*  width: 6%;*/
+/*  width: 100%;*/
+}
+
+#players td{
+  margin: auto;
+}
+
+tr {
+/*    display: block;*/
+    width: auto;
+    margin: auto 25px;
+}
+td {
+    /* display: inline-block; */
+    padding: 5px 15%;
+    width: auto;
+    border: 1px solid black;
+    background-color: blueviolet;
+/*    margin: 5px;*/
+/*    text-align: center;*/
+
+}
+
+#choices button {
+  height: 100px;
+  width: 100px;
+  margin: 0 7.5%;
+}
+
+#winner {
+  position: fixed;
+  background-color: antiquewhite;
+  display: none;
+  width: 65%;
+  height: 250px;
+  margin: auto;
+  left: 17.5%;
+  top: 10%;
+  border: 2px solid black;
+}
+
+#winner p {
+  text-align: center;
+  margin: auto;
+  padding: 100px;
+/*  vertical-align: middle;*/
+
+}
