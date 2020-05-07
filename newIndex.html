@@ -2,18 +2,34 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <header>
+
+        <div id="battle">
+            <h1>Rock - Paper - Scissors</h1>
+            <img src="https://image.shutterstock.com/image-illustration/pixel-art-hands-showing-rock-260nw-314359316.jpg"
+                alt="">
+        </div>
+    </header>
+
     <div id="choices">
-        <button id="paperId">Paper</button>
-        <button id="rockId">Rock</button>
-        <button id="scissorsId">Scissors</button>
+        <h2>Choose your weapon!</h2>
+        <button id="paperId">
+            <img src="images/paper-button.jpg" alt="Paper">
+        </button>
+        <button id="rockId">
+            <img src="images/rock-button.jpg" alt="Rock">
+        </button>
+        <button id="scissorsId">
+            <img src="images/scissors-button.jpg" alt="Scissors">
+        </button>
     </div>
     <div id="marquee">
-        <p id="round-choices"></p>
-        <p id="round-result"></p>
+        <p id="round-choices">Round Choices</p>
+        <p id="round-result">Round Result</p>
     </div>
     <div id="stats">
         <table>
@@ -22,8 +38,8 @@
                 <td>Computer</td>
             </tr>
             <tr id="scores">
-                <td id="playerScore"></td>
-                <td id="compScore"></td>
+                <td id="playerScore">0</td>
+                <td id="compScore">0</td>
             </tr>
         </table>
     </div>

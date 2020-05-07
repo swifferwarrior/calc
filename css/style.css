@@ -1,7 +1,7 @@
 body{
     background-color: aqua;
 }
-#choices, #stats, #marquee{
+#choices, #stats, #marquee, #battle{
     display: block;
     border: 1px solid black;
     text-align: center;
