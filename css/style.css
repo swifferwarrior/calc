@@ -37,9 +37,11 @@ td {
 }
 
 #choices button {
-  height: 100px;
-  width: 100px;
+  height: auto;
+  /* width: 116px; */
   margin: 0 7.5%;
+  width: auto;
+  padding: 0%;
 }
 
 #winner {
