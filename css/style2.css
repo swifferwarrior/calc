@@ -1,0 +1,68 @@
+.headspace {
+    grid-area: headspace;
+}
+
+#header{
+    grid-area: header;
+    background-color: antiquewhite;
+}
+
+#choice-border{
+    grid-area: brdr;
+    background-color: powderblue;
+}
+
+#button{
+    grid-area: button;
+}
+
+#choices{
+    grid-area: choices;
+    background-color: steelblue;
+}
+
+#result{
+    grid-area: result;
+    background-color: darkblue;
+}
+
+#player{
+    grid-area: player;
+    background-color: red;
+}
+
+#comp{
+    grid-area: comp;
+    background-attachment: blue;
+}
+
+#player-score{
+    grid-area: player-score;
+    background-color: crimson;
+}
+
+#comp-score{
+    grid-area: comp-score;
+    background-color: aqua;
+}
+
+.body{
+    display: grid;
+    grid-template-columns: auto 5px 1fr 1fr 5px 1fr 1fr 5px 1fr 1fr 5px auto;
+    grid-template-rows: 2fr 5px 1fr 5px 2fr 5px;
+    grid-template-areas:
+        ". . . . . . . . . . . ."
+        ". . . . . . . . . . . ."
+
+        ". . header header header header header header header header . ." /* title */
+
+        ". border border border border border border border border border border  ." /*topborder*/
+        ". border button button border button button border button button border ." /*buttons*/
+        ". border border border border border border border border border border  ." /*bottom border*/
+
+        ". . . . . choices choices . . . . ." /*choices*/
+        ". . . . . result result . . . . ." //*result*/
+        ". . . . . player comp . . . . ." /*player-comp*/
+        ". . . . . player-score comp-score . . . . ." /*scores*/
+
+}
