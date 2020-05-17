@@ -1,68 +1,70 @@
-.headspace {
-    grid-area: headspace;
+body{
+    background-color: grey;
 }
+/* .headspace {
+    grid-area: headspace;
+} */
 
-#header{
+header{
+    display: grid;
     grid-area: header;
     background-color: antiquewhite;
+    justify-self: center;
 }
 
-#choice-border{
-    grid-area: brdr;
-    background-color: powderblue;
-}
-
-#button{
-    grid-area: button;
-}
-
-#choices{
+.choices{
+    display: grid;
     grid-area: choices;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "rock paper scissors";
     background-color: steelblue;
 }
 
-#result{
-    grid-area: result;
-    background-color: darkblue;
+.rockId{
+    grid-area: rock;
+    display: inline-block;
 }
 
-#player{
-    grid-area: player;
-    background-color: red;
+.paperId{
+    grid-area: paper;
+    display: inline-block;
 }
 
-#comp{
-    grid-area: comp;
-    background-attachment: blue;
+.scissorsId{
+    grid-area: scissors;
+    display: inline-block;
 }
 
-#player-score{
-    grid-area: player-score;
-    background-color: crimson;
-}
-
-#comp-score{
-    grid-area: comp-score;
-    background-color: aqua;
-}
-
-.body{
+.footer{
     display: grid;
-    grid-template-columns: auto 5px 1fr 1fr 5px 1fr 1fr 5px 1fr 1fr 5px auto;
-    grid-template-rows: 2fr 5px 1fr 5px 2fr 5px;
+    grid-area: footer;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 25px 1fr 4fr 1fr 25px;
+    grid-template-rows: 150px 3fr 2fr;
+    /*grid-template-columns: auto 5px 1fr 1fr 5px 1fr 1fr 5px 1fr 1fr 5px auto;
+    grid-template-rows: 2fr 5px 1fr 5px 2fr 5px;*/
     grid-template-areas:
-        ". . . . . . . . . . . ."
-        ". . . . . . . . . . . ."
+        ". . . . . "
+        ". header header header ."
+        ". choices choices choices ."
+        ". footer footer footer ."
+        ". . . . ."
 
-        ". . header header header header header header header header . ." /* title */
+        /* ". . . . . . . . . . . ." */
+        /* ". . . . . . . . . . . ." */
 
-        ". border border border border border border border border border border  ." /*topborder*/
-        ". border button button border button button border button button border ." /*buttons*/
-        ". border border border border border border border border border border  ." /*bottom border*/
+        /* ". . header header header header header header header header . ." title */
 
-        ". . . . . choices choices . . . . ." /*choices*/
-        ". . . . . result result . . . . ." //*result*/
-        ". . . . . player comp . . . . ." /*player-comp*/
-        ". . . . . player-score comp-score . . . . ." /*scores*/
+        /* ". border border border border border border border border border border  ." topborder */
+        /* ". border button button border button button border button button border ." buttons */
+        /* ". border border border border border border border border border border  ." bottom border */
+
+        /* ". . . . . choices choices . . . . ." choices */
+        /* ". . . . . result result . . . . ." /result */
+        /* ". . . . . player comp . . . . ." player-comp */
+        /* ". . . . . player-score comp-score . . . . ." scores */
 
 }

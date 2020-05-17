@@ -39,7 +39,9 @@ td {
 #choices button {
   height: auto;
   /* width: 116px; */
-  margin: 0 7.5%;
+  margin: 0 
+  
+  %;
   width: auto;
   padding: 0%;
 }

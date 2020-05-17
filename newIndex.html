@@ -9,14 +9,14 @@
     <header id="header">
 
         <div id="battle">
-            <h1>Rock - Paper - Scissors</h1>
+            <h1>MAKE YOUR CHOICE</h1>
             <img src="https://image.shutterstock.com/image-illustration/pixel-art-hands-showing-rock-260nw-314359316.jpg"
                 alt="">
         </div>
     </header>
 
     <div id="choices">
-        <h2>Choose your weapon!</h2>
+        <!-- <h2>Choose your weapon!</h2> -->
         <button id="paperId">
             <img src="images/paper-button.jpg" alt="Paper">
         </button>
@@ -27,26 +27,29 @@
             <img src="images/scissors-button.jpg" alt="Scissors">
         </button>
     </div>
-    <div id="marquee">
-        <p id="round-choices">Round Choices</p>
-        <p id="round-result">Round Result</p>
+    <div id="footer">
+        <div id="marquee">
+            <p id="round-choices">Round Choices</p>
+            <p id="round-result">Round Result</p>
+        </div>
+        <div id="stats">
+            <table>
+                <tr id="players">
+                    <td>Player</td>
+                    <td>Computer</td>
+                </tr>
+                <tr id="scores">
+                    <td id="playerScore">0</td>
+                    <td id="compScore">0</td>
+                </tr>
+            </table>
+        </div>
+        <div id="winner">
+            <span></span>
+            <p>Nobody wins!</p>
+        </div>
     </div>
-    <div id="stats">
-        <table>
-            <tr id="players">
-                <td>Player</td>
-                <td>Computer</td>
-            </tr>
-            <tr id="scores">
-                <td id="playerScore">0</td>
-                <td id="compScore">0</td>
-            </tr>
-        </table>
-    </div>
-    <div id="winner">
-        <span></span>
-        <p>Nobody wins!</p>
-    </div>
+
 
     <script src="js/script.js"></script>
 </body>
