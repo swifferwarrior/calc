@@ -6,8 +6,8 @@ rockBtn.addEventListener("click", () => playRock());
 paperBtn.addEventListener("click", () => playPaper());
 scissorsBtn.addEventListener("click", () => playScissors());
 
-//        const pScore = document.getElementById(playerScore);
-//        const cScore = document.getElementById(compScore);
+        const pScore = document.getElementById(playerScore);
+        const cScore = document.getElementById(compScore);
 
 //let playerScore = 0;
 //let computerScore = 0;
@@ -135,9 +135,11 @@ function game() {
 
     if (result == 'win') {
       ++playerScore;
+      pScore.innerHTML(playerScore);
        console.log("Player: " + playerScore + "/n" + "Computer: " + computerScore);
     } else if (result == 'lose') {
       ++computerScore;
+      cScore.innerHTML(computerScore);
        console.log("Player: " + playerScore + "/n" + "Computer: " + computerScore);
     } else if (result == 'tie') {
       if (i < 1) {
