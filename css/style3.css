@@ -7,6 +7,8 @@ body{
     ". . main . ."
     ". . footer . .";
     background-color: antiquewhite;
+    background-image: url(../images/wanted-poster.jpeg);
+    background-size: cover;
 }
 
 header{
@@ -17,8 +19,8 @@ header{
 }
 
 header, footer {
-    background-color: antiquewhite;
-    border: 5px double saddlebrown;
+    /* background-color: antiquewhite; */
+    border: 7px double saddlebrown;
     margin: 10px 0;
 }
 
@@ -35,13 +37,12 @@ main{
     grid-template-areas: 
     "subtitle subtitle subtitle"
     "rock paper scissors";
-    border: saddlebrown 5px double;
+    border: saddlebrown 7px double;
 }
 
 footer{
     display: grid;
     grid-area: footer;
-    background-color: antiquewhite;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "marquee stats";
