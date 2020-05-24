@@ -197,6 +197,20 @@ img{
 
 #winner {
     display: none;
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    right: 20%;
+    bottom: 20%;
+    background-color: burlywood;
+    color: saddlebrown;
+    padding: 125px;
+    font-size: 5vw;
+    font-family: "Rye";
+    text-align: center;
+    margin: auto;
+    border: 10px saddlebrown double;
+    /* vertical-align: middle; */
 }
 
 /* #players{

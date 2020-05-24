@@ -131,6 +131,7 @@ function singleRound(playerSelection, computerSelection) {
 //      result = 'tie';
     }
   }
+  winCheck();
 };
 
 function playerScored(){
@@ -155,6 +156,21 @@ function compScored(){
   function properNoun(word) {
     if (typeof word === 'string') {
       return word.charAt(0).toUpperCase() + word.slice(1);
+    }
+    return null;
+  };
+
+ function winCheck(){
+    let youWin = document.getElementById('pScore');
+    let compWins = document.getElementById('cScore');
+    let winner = document.getElementById('winner');
+
+    if (youWin.textContent == "5"){
+      winner.innerHTML = "YOU WIN!";
+      winner.style.display = "block";
+    } else if (compWins.textContent == "5"){
+      winner.innerHTML = "COMPUTER WINS!";
+      winner.style.display = "block";
     }
     return null;
   };
