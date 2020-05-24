@@ -1,7 +1,7 @@
 body{
     display: grid;
     grid-template-columns: 40px 50px auto 50px 40px;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: auto 2fr 1fr;
     grid-template-areas:
     ". . header . ."
     ". . main . ."
@@ -26,10 +26,10 @@ main{
     grid-area: main;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 3fr;
+    grid-template-rows: auto 2fr;
     align-content: center;
     /* background-color: powderblue; */
-    column-gap: 50px;
+    column-gap: 1vw;
     row-gap: 1px;
     padding: 0 50px;
     grid-template-areas: 
@@ -45,26 +45,28 @@ footer{
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "marquee stats";
-    column-gap: 50px;
+    column-gap: 2vw;
 }
 
 h1, h2{
     font-family: 'Rye';
-    font-size:  4em;
     letter-spacing: 2px;
     color: saddlebrown;
-    margin: 2%;
+    margin: auto;
     vertical-align: auto;
 }
 
 h1{
-    font-size: 3em;
+    font-size: 5vw;
+    padding: 10px 5px;
+    /* font-size: 4em; */
 }
 
 h2 {
     grid-area: subtitle;
-    font-size: 2em;
+    font-size: 3vw;
     text-align: center;
+    padding: 5px 0;
 }
 
 p, td{
@@ -93,12 +95,13 @@ p, td{
 #rockId, #paperId, #scissorsId{
     background-color: #C2B395;
     border: 5px ridge saddlebrown;
-    /* width: auto; */
-    margin-bottom: 10px;
+    width: 100%;
+    margin: 10px auto;
 }
 
 button{
     transition: all 0.3s;
+    max-width: 250px;
 }
 
 button:hover{
@@ -132,23 +135,27 @@ img{
     grid-area: choices;
     background-color: burlywood;
     text-align: center;
-    height: 65px;
+    height: 75%;
+    max-height: 50px;
 }
 
 #round-result{
     text-align: center;
     grid-area: result;
     background-color: burlywood;
+    max-height: 50px;
 }
 
 #round-choices, #round-result{
     color: saddlebrown;
     text-align: center;
+    margin: auto 10px;
+    padding: 5px 0;
 }
 
 /*#stats{ lvl 1 right*/
   #player, #computer, #playerScore, #compScore{
-    display: inline-grid;
+    /* display: inline-grid; */
     width: 150px;
     grid-area: stats;
     position: relative;
@@ -166,13 +173,13 @@ img{
 }
 
 #player, #computer{
-  height: 50px;
-  font-size: 1.4em;
+  height: 20%;
+  font-size: 2vw;
   padding-top: 10px;
 }
 
 #playerScore, #compScore{
-  height: 50px;
+  height: 50%;
 }
 
 #pScore, #cScore {
@@ -181,7 +188,7 @@ img{
   margin: auto;
 }
 
-#pScore:
+/* #pScore: */
 
 #stats{
   margin: auto;
@@ -192,13 +199,13 @@ img{
     display: none;
 }
 
-#players{
+/* #players{
 
 }
 
 #scores{
 
-}
+} */
 
 #player{
     grid-area: player
