@@ -97,8 +97,17 @@ p, td{
     margin-bottom: 10px;
 }
 
+button{
+    transition: all 0.3s;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
 img{
-    max-width: auto;
+    height: auto;
+    width: 90%;
     padding: 0;
     margin: 0;
 }
@@ -157,14 +166,22 @@ img{
 }
 
 #player, #computer{
-  height: 25px;
-/*  padding: 10px;*/
+  height: 50px;
+  font-size: 1.4em;
+  padding-top: 10px;
 }
 
 #playerScore, #compScore{
   height: 50px;
-  padding-top: 15px;
 }
+
+#pScore, #cScore {
+  font-size: 2em;
+  padding: 0;
+  margin: auto;
+}
+
+#pScore:
 
 #stats{
   margin: auto;
