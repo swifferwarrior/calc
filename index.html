@@ -1,134 +1,59 @@
 <!DOCTYPE html>
 <html>
 
-<head></head>
+<head>
+    <link rel="stylesheet" href="css/style3.css">
+</head>
 
-<body>
+<body class='body'>
+    <header id="header">
 
-    <script>
+        <div id="battle">
+            <h1>PAPER | ROCK | SCISSORS</h1>
+            <!-- <img src="https://image.shutterstock.com/image-illustration/pixel-art-hands-showing-rock-260nw-314359316.jpg"
+                alt=""> -->
+        </div>
+    </header>
 
-        function computerPlay() {
-            //will randomply return either rock, paper, or scissors
-            let choice = '';
+    <main id="choices">
+        <h2>MAKE YOUR CHOICE</h2>
+        <!-- <hr> -->
+        <button id="paperId">
+            <img src="images/paper-button.jpg" alt="Paper">
+        </button>
+        <button id="rockId">
+            <img src="images/rock-button.jpg" alt="Rock">
+        </button>
+        <button id="scissorsId">
+            <img src="images/scissors-button.jpg" alt="Scissors">
+        </button>
+    </main>
 
-            switch (Math.floor(Math.random() * 3)) {
-                case 0:
-                    choice = "rock";
-                    break;
-                case 1:
-                    choice = "paper";
-                    break;
-                case 2:
-                    choice = "scissors";
-            }
+    <footer id="footer">
+        <div id="marquee">
+            <p id="round-choices">Round Choices</p>
+            <p id="round-result">Round Result</p>
+        </div>
+        <div id="stats">
+            <table>
+                <tr id="players">
+                    <td id="player">Player</td>
+                    <td id="computer">Computer</td>
+                </tr>
+                <tr id="scores">
+                    <td id="playerScore"><p id="pScore">0</p></td>
+                  <td id="compScore"><p id="cScore">0</p></td>
+                </tr>
+            </table>
+        </div>
+        <div id="winner">
+            <span></span>
+            <p>Nobody wins!</p>
+        </div>
+    </footer>
 
-            return choice;
-        }; //WORKING
 
-        function singleRound(playerSelection, computerSelection) {
-            //returns a string that declares the winner
-            playerSelection = prompt("Rock, paper, or scissors?").toLowerCase();
-            computerSelection = computerPlay();
-
-            let win = 'You Win! ' + properNoun(playerSelection) + ' beats ' + properNoun(computerSelection);
-            let lose = 'You Lose! ' + properNoun(computerSelection) + ' beats ' + properNoun(playerSelection);
-            let tie = 'Tie! Try again.';
-            let result;
-
-            if (playerSelection == 'rock') {
-                if (computerSelection == 'paper') {
-                    console.log(lose);
-                    result = 'lose';
-                } else if (computerSelection == 'scissors') {
-                    console.log(win);
-                    result = 'win';
-                } else if (computerSelection == 'rock') {
-                    console.log(tie);
-                    result = 'tie';;
-                }
-            } else if (playerSelection == 'paper') {
-                if (computerSelection == 'rock') {
-                    console.log(win);
-                    result = 'win';
-                } else if (computerSelection == 'scissors') {
-                    console.log(lose);
-                    result = 'lose';
-                } else if (computerSelection == 'paper') {
-                    console.log(tie);
-                    result = 'tie';
-                }
-
-            } else if (playerSelection == 'scissors') {
-                if (computerSelection == 'paper') {
-                    console.log(win);
-                    result = 'win';
-                } else if (computerSelection == 'rock') {
-                    console.log(lose);
-                    result = 'lose';
-                    //computerScore++;
-                } else if (computerSelection == 'scissors') {
-                    console.log(tie);
-                    result = 'tie';
-                }
-            } else if (playerSelection == 'paper'){
-                if (computerSelection == 'rock') {
-                    console.log(win);
-                    result = 'win';
-                } else if (computerSelection == 'scissors') {
-                    console.log(lose);
-                    result = 'lose';
-                } else if (computerSelection == 'paper') {
-                    console.log(tie);
-                    result = 'tie';
-                }
-            }
-
-              return result;
-        }; //WORKING
-
-        function game() {
-            let playerScore = 0;
-            let computerScore = 0;
-
-            for (let i = 0; i < 5; i++) {
-
-                let result = singleRound();
-              
-                if (result == 'win') {
-                    ++playerScore;
-                    //console.log(score);
-                } else if (result == 'lose') {
-                    ++computerScore;
-                    //console.log(score);
-                } else if (result == 'tie') {
-                    if (i < 1){
-                        i = 0;
-                    } else {
-                        --i;
-                    }
-                }
-              
-                console.log("Score - Player: " + playerScore + ", Computer: " + computerScore);
-              
-            }
-
-            if (playerScore > computerScore) {
-                console.log('You win!');
-                console.log("Score - Player: " + playerScore + ", Computer: " + computerScore);
-            } else {
-                console.log('You lose!')
-                console.log("Score - Player: " + playerScore + ", Computer: " + computerScore);
-            }
-        };
-
-        function properNoun(word) {
-            if (typeof word === 'string') {
-                return word.charAt(0).toUpperCase() + word.slice(1);
-            }
-            return null;
-        };
-
-    </script>
+    <script src="js/script2.js"></script>
 </body>
 
 </html>
