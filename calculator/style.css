@@ -1,0 +1,81 @@
+#calculator {
+    background-color: slategray;
+    padding: 50px;
+    width: 300px;
+}
+
+#buttons{
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "display display display display"
+    "clr div mul min"
+    "seven eight nine plu"
+    "four five six plu"
+    "one two three ent"
+    "zer zer dec ent"
+}
+
+#display{
+    grid-area: display
+}
+
+#dec {
+    grid-area:dec;
+}
+#plu {
+    grid-area:plu;
+}
+#ent {
+    grid-area:ent;
+}
+#clr {
+    grid-area:clr;
+}
+#div {
+    grid-area:div;
+}
+#mul {
+    grid-area:mul;
+}
+#min {
+    grid-area:min;
+}
+#b0 {
+    grid-area:zer;
+}
+#b1 {
+    grid-area:one;
+}
+#b2 {
+    grid-area:two;
+}
+#b3 {
+    grid-area:three;
+}
+#b4 {
+    grid-area:four;
+}
+#b5 {
+    grid-area:five;
+}
+#b6 {
+    grid-area:six;
+}
+#b7 {
+    grid-area:sevem;
+}
+#b8 {
+    grid-area:eight;
+}
+#b9 {
+    grid-area:nine;
+}
+
+button{
+    margin: 5px 2.5px;
+}
+
+
