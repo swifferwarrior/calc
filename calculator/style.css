@@ -1,14 +1,27 @@
-#calculator {
-    background-color: slategray;
-    padding: 50px;
-    width: 300px;
+
+
+html, main {
+    width: auto;
+    height: auto;
+    margin: auto;
 }
 
-#buttons{
+div#calculator {
+    background-color: slategray;
+    padding: 50px;
+    width: 500px;
+    height: auto;
+}
+
+
+div#buttons{
     display: grid;
     position: relative;
+    width: 90%;
+    height: 700px;
+    margin: auto;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: 
     "display display display display"
     "clr div mul min"
@@ -19,7 +32,17 @@
 }
 
 #display{
-    grid-area: display
+    grid-area: display;
+    position: relative;
+    padding: 5px 10px;
+    width: 90%;
+    height: 50px;
+    margin: auto;
+    text-align: right;
+}
+
+p, span, input {
+    font-size: 2em;
 }
 
 #dec {
@@ -65,7 +88,7 @@
     grid-area:six;
 }
 #b7 {
-    grid-area:sevem;
+    grid-area:seven;
 }
 #b8 {
     grid-area:eight;
