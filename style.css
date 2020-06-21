@@ -1,0 +1,137 @@
+
+
+html, main {
+    width: auto;
+    height: auto;
+    margin: auto;
+}
+
+div#calculator {
+    background-color: #3E5158;
+    padding: 50px;
+    width: 500px;
+    height: auto;
+    text-align: center;
+    border-radius: 20px;
+}
+
+
+div#buttons{
+    display: grid;
+    position: relative;
+    width: 90%;
+    height: 700px;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px 1fr 1fr 1fr 1fr 1fr 25px;
+    text-align: center;
+    grid-template-areas: 
+    "display display display display"
+    "clr div mul min"
+    "seven eight nine plu"
+    "four five six plu"
+    "one two three ent"
+    "zer zer dec ent";
+}
+
+button{
+    border-radius: 5px;
+    position: relative;
+    background-color: #72828C;
+    color: #CAD7DC;
+    /* width: 80%; */
+    /* height: 80%; */
+    text-align: center;
+    margin: auto;
+    /* left: 7.5%; */
+}
+p, span, input {
+    font-size: 2em;
+}
+
+#display{
+    grid-area: display;
+    font-family: 'VT323';
+    position: relative;
+    padding: 0px 10px;
+    width: 90%;
+    height: 75px;
+    margin: auto;
+    text-align: right;
+    font-size: 3em;
+    background-color: #93B20E;
+    border-radius: 5px;
+    color:  #0F380F;
+}
+
+
+#dec {
+    grid-area:dec;
+}
+#plu {
+    grid-area:plu;
+    /* height: 90%; */
+}
+#ent {
+    grid-area:ent;
+    /* height: 90%; */
+}
+#clr {
+    grid-area:clr;
+    background-color: #AA676F;
+}
+#div {
+    grid-area:div;
+}
+#mul {
+    grid-area:mul;
+}
+#min {
+    grid-area:min;
+}
+#b0 {
+    grid-area:zer;
+    /* width: 90%; */
+}
+#b1 {
+    grid-area:one;
+}
+#b2 {
+    grid-area:two;
+}
+#b3 {
+    grid-area:three;
+}
+#b4 {
+    grid-area:four;
+}
+#b5 {
+    grid-area:five;
+}
+#b6 {
+    grid-area:six;
+}
+#b7 {
+    grid-area:seven;
+}
+#b8 {
+    grid-area:eight;
+}
+#b9 {
+    grid-area:nine;
+}
+
+button{
+    margin: 5px 2.5px;
+}
+
+@font-face {
+    font-family: 'VT323';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('VT323 Regular'), local('VT323-Regular'), url(https://fonts.gstatic.com/s/vt323/v11/pxiKyp0ihIEF2isfFJU.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+
